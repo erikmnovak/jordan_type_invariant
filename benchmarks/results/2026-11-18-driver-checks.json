@@ -1,0 +1,73 @@
+{
+  "query_synthetic_answers": "all complete vectors match the previous driver",
+  "method_synthetic_results": "all nine inputs, schedule sizes and output checksums match",
+  "cache_policies": "reuse and reset agree for every synthetic workload in both programs",
+  "file_inputs": "both drivers agree on seven translated file queries; CSV paths round-trip",
+  "invalid_runs": "24 invalid argument checks and both input-overwrite checks passed",
+  "synthetic_inputs": "Exact grades, coefficients, slices and translation order compared against both preserved drivers.",
+  "query_scale": [
+    {
+      "queries": 1000,
+      "unique_translations": 1000,
+      "cache": "reset",
+      "peak_rss_kib": 3712,
+      "elapsed_seconds": 0.01,
+      "retained_grades": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "queries": 1000000,
+      "unique_translations": 1000000,
+      "cache": "reset",
+      "peak_rss_kib": 3840,
+      "elapsed_seconds": 7.62,
+      "retained_grades": [
+        2,
+        2,
+        4
+      ]
+    }
+  ],
+  "large_input": {
+    "generators": 1000000,
+    "parameters": 2,
+    "relations": 0,
+    "grade": [
+      0,
+      0
+    ],
+    "slices": "tests/cases/empty_plane.slices",
+    "queries": 2,
+    "cache": "reset",
+    "peak_rss_kib": 112924,
+    "elapsed_seconds": 0.27,
+    "purpose": "Large-file loading only; empty slices deliberately avoid large-dimensional linear algebra",
+    "input_sha256": "ffe3330fe5f97f4ece013d7a96f7cd990b383ead276bc63cd3c918104b19258c"
+  },
+  "date": "2026-11-18",
+  "purpose": "Benchmark driver validation, not a new algorithm-performance comparison.",
+  "compiler": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "source_sha256": {
+    "benchmarks/workloads.hpp": "c10db3ab7cebfb32c0bae0f481903566c3152bfa8e1f6a5765188aef3983d513",
+    "benchmarks/method_benchmark.cpp": "d41978a7f2c892e1954c664bc33734a90b7455c9f6774d4733c4acc1f2bab332",
+    "benchmarks/query_benchmark.cpp": "b89bfd653678113f1beda5249f1ef5dc92c4b884b8616e4d0feb94ec7cb92dc8",
+    "src/jordan.cpp": "49ecde5eda61e0f7873a53ddaf8bf937b179c7a256ad66ddc38911ea4048e6f7",
+    "include/jordan/jordan.hpp": "940d51b80597587fd52a61334d20dcad95a81f5ec7b6505bc3f7528ce6f409c1"
+  },
+  "prior_driver_sha256": {
+    "method_benchmark.cpp": "dfefe9bf5d3e0fe629010d947cd50747d9009a54e6474bee062441b765f56148",
+    "query_benchmark.cpp": "603a89a569c7551eaa64a510d75066d0ea019a6b07a5dcd59bf157348a249ce5"
+  },
+  "scale_command": "jordan_benchmark file --presentation tests/cases/free_line.scc --slices tests/cases/line_pair.slices --queries N --step 1 --cache reset",
+  "scale_note": "N=1000 and N=1000000. All three query kinds ran; peak RSS covers the entire process, including untimed verification. No answer file was requested.",
+  "executable_sha256": {
+    "jordan_benchmark": "1b08a6bd588545d15a64682a3ac938a9e3c325916188c04d49972f868501218d",
+    "jordan_method_benchmark": "da48b7febcff877d3d49f279b223f67d18f595924884c6ed830093f523159ebd"
+  },
+  "library_sha256": "5ee193116ee17e783bd437389991196e8161cd00c4e5ba6ee9aedd687e9cd9ab",
+  "correctness_suite": "All four CTest groups passed: 29 doctest cases and 6804 assertions."
+}

@@ -1,0 +1,6 @@
+# Equal active counts can represent different generator sets.
+scc2020
+2
+0 2 0
+0 1 ;
+1 0 ;

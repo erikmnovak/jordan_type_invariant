@@ -1,0 +1,186 @@
+{
+  "presentations": [
+    {
+      "name": "circle_h0_small",
+      "file": "circle_h0_small.scc",
+      "source": "https://doi.org/10.3217/rxedk-qyq77",
+      "authors": "Michael Kerber and Tung Lam",
+      "archive_member": "benchmark_data_sets_of_minimal_presentations_of_2_parameter_persistence_modules/instances/S1_density_05000_1.scc_2",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "bd60018874e999a386513c7b7dfcef1b581e9af1f065fd95c0513588ede3b3d5",
+      "modifications": "none",
+      "homology_degree": 0
+    },
+    {
+      "name": "circle_h0_large",
+      "file": "circle_h0_large.scc",
+      "source": "https://doi.org/10.3217/rxedk-qyq77",
+      "authors": "Michael Kerber and Tung Lam",
+      "archive_member": "benchmark_data_sets_of_minimal_presentations_of_2_parameter_persistence_modules/instances/S1_density_20000_1.scc_2",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "790e752608546d225c17c8177c93f59dc38186d890d98998534eb102696c61da",
+      "modifications": "none",
+      "homology_degree": 0
+    },
+    {
+      "name": "circle_h1",
+      "file": "circle_h1.scc",
+      "source": "https://doi.org/10.3217/rxedk-qyq77",
+      "authors": "Michael Kerber and Tung Lam",
+      "archive_member": "benchmark_data_sets_of_minimal_presentations_of_2_parameter_persistence_modules/instances/S1_density_20000_1.scc_1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "2dcac006278718fde68e1bf35837d4ed5282d93514fcd52cb347b94f756e7319",
+      "modifications": "none",
+      "homology_degree": 1
+    },
+    {
+      "name": "torus_h1",
+      "file": "torus_h1.scc",
+      "source": "https://github.com/JanJend/Persistence-Algebra/blob/d9b85f4bf692b0ada09e2c43897685b83a2b705c/test_presentations/minpres_dim_1_torus_1000_3_0.10.scc",
+      "authors": "Jan Jendrysiak / Persistence-Algebra contributors",
+      "revision": "d9b85f4bf692b0ada09e2c43897685b83a2b705c",
+      "git_blob": "052d8e1ac21549615d6d2f9d94c06ed77e8ef7b8",
+      "license": "GPL-3.0",
+      "license_file": "COPYING",
+      "sha256": "11cc06d69a67d261177a8b5a49bf48efd5f4f31d2a3c0cb3163bc5c4e23c34a7",
+      "modifications": "none"
+    },
+    {
+      "name": "multicover_small",
+      "file": "multicover_small.scc",
+      "source": "https://github.com/JanJend/Persistence-Algebra/blob/d9b85f4bf692b0ada09e2c43897685b83a2b705c/test_presentations/multi_cover_050_10_1_min_pres.scc",
+      "authors": "Jan Jendrysiak / Persistence-Algebra contributors",
+      "revision": "d9b85f4bf692b0ada09e2c43897685b83a2b705c",
+      "git_blob": "a927afbd8a642e955a522f2d6651ac5b1944d380",
+      "license": "GPL-3.0",
+      "license_file": "COPYING",
+      "sha256": "3d8bfd3ebdfeb9a81ace430d16b897cfebf89f50481988c661728923d595ba0b",
+      "modifications": "none"
+    },
+    {
+      "name": "multicover_large",
+      "file": "multicover_large.scc",
+      "source": "https://github.com/JanJend/Persistence-Algebra/blob/d9b85f4bf692b0ada09e2c43897685b83a2b705c/test_presentations/multi_cover_125_10_1_min_pres.scc",
+      "authors": "Jan Jendrysiak / Persistence-Algebra contributors",
+      "revision": "d9b85f4bf692b0ada09e2c43897685b83a2b705c",
+      "git_blob": "14616293c7c54b180b0de935f351101155e9375b",
+      "license": "GPL-3.0",
+      "license_file": "COPYING",
+      "sha256": "2f1b43d338d59a1b4a4f01444095a388e7000e4b1f26ee91101218f6d20a9955",
+      "modifications": "none"
+    },
+    {
+      "name": "dragon",
+      "file": "dragon.scc",
+      "source": "https://github.com/JanJend/Persistence-Algebra/blob/d9b85f4bf692b0ada09e2c43897685b83a2b705c/test_presentations/off_dragon_min_pres.scc",
+      "authors": "Jan Jendrysiak / Persistence-Algebra contributors",
+      "revision": "d9b85f4bf692b0ada09e2c43897685b83a2b705c",
+      "git_blob": "e396fe4d13010538d902991df0032b71735ec4ed",
+      "license": "GPL-3.0",
+      "license_file": "COPYING",
+      "sha256": "796ba323769fb7ad999cd7e217b8687961d40f143445c59ff7c950825bca55c7",
+      "modifications": "none"
+    },
+    {
+      "source_commit": "b86114a135b3e45dac37edf7219b0ebad9517163",
+      "raw_sha256": "ce79808e213c7219dacd80226d5f64428e93443a8d3380730cf26caf9cb3e8d2",
+      "cell_type": "FoxP3",
+      "generators": 4343,
+      "relations": 66641,
+      "parameters": 2,
+      "homology_degree": 0,
+      "minimal": false,
+      "density": "root mean squared distance to the eight nearest other points",
+      "edge_radius_cutoff": 187.1189046205544,
+      "cutoff_rule": "95th percentile of the eighth-neighbour distance",
+      "filtration": "vertices at (0, codensity); edges at (Euclidean length, max endpoint codensity); edges beyond cutoff omitted",
+      "coordinate_units": "native published coordinate units",
+      "sha256": "86ea75ef14c51a052f80c4f1b78edf7b5e71393f8d7839f7a9ad7b8eb5383208",
+      "name": "tumour_foxp3",
+      "file": "tumour_foxp3.scc",
+      "source": "https://raw.githubusercontent.com/MultiparameterTDAHistology/SpatialPatterningOfImmuneCells/b86114a135b3e45dac37edf7219b0ebad9517163/LargeHypoxicRegion2.csv",
+      "authors": "Oliver Vipond et al., published immune-cell point-cloud data",
+      "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8522280/",
+      "article_license": "CC-BY-4.0",
+      "modifications": "Derived H0 presentation of the radius/codensity graph described in this record; raw cell data are not bundled."
+    },
+    {
+      "source_commit": "b86114a135b3e45dac37edf7219b0ebad9517163",
+      "raw_sha256": "ce79808e213c7219dacd80226d5f64428e93443a8d3380730cf26caf9cb3e8d2",
+      "cell_type": "CD8",
+      "generators": 9214,
+      "relations": 174686,
+      "parameters": 2,
+      "homology_degree": 0,
+      "minimal": false,
+      "density": "root mean squared distance to the eight nearest other points",
+      "edge_radius_cutoff": 130.4784747075455,
+      "cutoff_rule": "95th percentile of the eighth-neighbour distance",
+      "filtration": "vertices at (0, codensity); edges at (Euclidean length, max endpoint codensity); edges beyond cutoff omitted",
+      "coordinate_units": "native published coordinate units",
+      "sha256": "c62933398b2840095f876672406845f0ad58ed950f73c7fd55e9b264c8e3aea0",
+      "name": "tumour_cd8",
+      "file": "tumour_cd8.scc",
+      "source": "https://raw.githubusercontent.com/MultiparameterTDAHistology/SpatialPatterningOfImmuneCells/b86114a135b3e45dac37edf7219b0ebad9517163/LargeHypoxicRegion2.csv",
+      "authors": "Oliver Vipond et al., published immune-cell point-cloud data",
+      "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8522280/",
+      "article_license": "CC-BY-4.0",
+      "modifications": "Derived H0 presentation of the radius/codensity graph described in this record; raw cell data are not bundled."
+    }
+  ],
+  "sampling": "Paired slice files use four singleton slices at the 10%, 30%, 50%, and 70% ranks of each axis of distinct generator/relation coordinates. Coordinates retain their original values.",
+  "graz_archive_note": "The archive download ended before completion. The three included members were read completely and individually hashed; the whole archive checksum was not verified.",
+  "local_sampling": [
+    {
+      "name": "multicover_large",
+      "generator_index": 16586,
+      "start": [
+        0.059649665214,
+        -8.0
+      ],
+      "end": [
+        0.059651138397,
+        -8.0
+      ],
+      "ranks_8": [
+        1261,
+        1103,
+        945,
+        787,
+        629,
+        471,
+        313,
+        155,
+        0
+      ],
+      "rule": "Hold the second coordinate at a generator birth and span to the second subsequent active critical first-coordinate value."
+    },
+    {
+      "name": "dragon",
+      "generator_index": 2057,
+      "start": [
+        -13.235,
+        38.928
+      ],
+      "end": [
+        -13.229,
+        38.928
+      ],
+      "ranks_8": [
+        55,
+        48,
+        41,
+        34,
+        27,
+        20,
+        13,
+        6,
+        0
+      ],
+      "rule": "Hold the second coordinate at a generator birth and span to the second subsequent active critical first-coordinate value."
+    }
+  ]
+}

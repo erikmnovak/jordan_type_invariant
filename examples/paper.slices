@@ -1,0 +1,11 @@
+# The paper's three slices, with the order retained as written.
+jordan-slices-v1
+2 3 # parameters, slices
+2   # points in the first slice
+0 1
+1 0
+2   # points in the second slice
+1 1
+2 0
+1   # points in the third slice
+2 1

@@ -1,0 +1,9 @@
+# input
+	 scc2020 # format
+ 1
+
+2 2 # no third count
+ +2e0;1 0 1 # repeated entries cancel
+ 3; # zero relation
+-1.25;
+.5;

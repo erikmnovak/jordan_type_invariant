@@ -1,0 +1,7 @@
+# Different grades can have the same quotient and normal forms.
+scc2020
+2
+1 2 0
+1 1 ; 0 1
+0 0 ;
+0 0 ;

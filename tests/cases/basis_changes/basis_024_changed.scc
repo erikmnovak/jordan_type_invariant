@@ -1,0 +1,15 @@
+# From matching original by: row[3] ^= row[0]; row[2] ^= row[0]; row[0] ^= row[3]; row[1] ^= row[4]; row[2] ^= row[1]; row[0] ^= row[2]; row[3] ^= row[0]; row[1] ^= row[3]; row[3] ^= row[2];
+scc2020
+2
+6 5 0
+1 0 ;
+2 0 ; 3 1
+2 1 ; 4 2 0
+3 3 ; 2
+0 0 ;
+3 1 ; 4 3
+0 0 ;
+0 0 ;
+0 0 ;
+0 0 ;
+0 0 ;

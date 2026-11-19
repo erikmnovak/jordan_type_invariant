@@ -1,0 +1,128 @@
+--- a/src/jordan.cpp
++++ b/src/jordan.cpp
+@@ -109,7 +109,55 @@
+   }
+ };
+ 
+-/** A quotient at one sampled grade, using global generator indices internally.
++/** The presentation data active at a grade, in original index order.
++ *
++ * Equal index sets give exactly the same relation reduction and quotient
++ * coordinates. Counts or quotient dimensions alone would not identify them.
++ * Store membership in 64-bit words to keep keys small even when most generators
++ * and relations are active. Classify only requested grades; no global
++ * subdivision is constructed. Unused bits in the final words stay zero.
++ */
++struct ActiveData {
++  std::vector<std::uint64_t> generators;
++  std::vector<std::uint64_t> relations;
++
++  ActiveData(const Presentation& input, const Grade& grade)
++      : generators((input.generator_grades.size() + 63) / 64, 0),
++        relations((input.relation_grades.size() + 63) / 64, 0) {
++    for (std::size_t g = 0; g < input.generator_grades.size(); ++g) {
++      if (less_equal(input.generator_grades[g], grade)) generators[g / 64] |= std::uint64_t{1} << (g % 64);
++    }
++    for (std::size_t r = 0; r < input.relation_grades.size(); ++r) {
++      if (less_equal(input.relation_grades[r], grade)) relations[r / 64] |= std::uint64_t{1} << (r % 64);
++    }
++  }
++
++  static bool contains(const std::vector<std::uint64_t>& words, std::size_t index) {
++    return (words[index / 64] & (std::uint64_t{1} << (index % 64))) != 0;
++  }
++
++  bool operator==(const ActiveData& other) const {
++    return generators == other.generators && relations == other.relations;
++  }
++};
++
++struct ActiveDataHash {
++  std::size_t operator()(const ActiveData& active) const noexcept {
++    // Hash both membership sets and their sizes. Full equality above resolves
++    // collisions; a fingerprint alone must never decide algebraic reuse.
++    std::uint64_t value = 14695981039346656037ULL;
++    const auto append = [&value](std::uint64_t entry) {
++      value = (value ^ entry) * 1099511628211ULL;
++    };
++    append(active.generators.size());
++    for (auto word : active.generators) append(word);
++    append(active.relations.size());
++    for (auto word : active.relations) append(word);
++    return static_cast<std::size_t>(value);
++  }
++};
++
++/** A quotient shared by grades with identical active presentation data.
+  *
+  * The relation basis is triangular with its largest nonzero row as pivot.
+  * Nonpivot active generators give a basis of the quotient. Keeping the original
+@@ -121,17 +169,17 @@
+   std::vector<Index> free_generators;
+   std::unordered_map<Index, Column> normal_forms;
+ 
+-  Stalk(const Presentation& input, const Grade& grade)
++  Stalk(const Presentation& input, const ActiveData& active)
+       : relations(0, checked_index(input.generator_grades.size())) {
+     for (std::size_t j = 0; j < input.relations.size(); ++j) {
+-      if (less_equal(input.relation_grades[j], grade) && !input.relations[j].empty()) {
++      if (ActiveData::contains(active.relations, j) && !input.relations[j].empty()) {
+         relations.append_col(input.relations[j]);
+       }
+     }
+     relations.set_num_cols(checked_index(relations.data.size()));
+     relations.column_reduction_triangular(true);
+     for (std::size_t g = 0; g < input.generator_grades.size(); ++g) {
+-      if (less_equal(input.generator_grades[g], grade) &&
++      if (ActiveData::contains(active.generators, g) &&
+           relations.pivots.find(static_cast<Index>(g)) == relations.pivots.end()) {
+         free_generators.push_back(static_cast<Index>(g));
+       }
+@@ -386,7 +434,10 @@
+ 
+ struct Engine::Impl {
+   Presentation presentation;
+-  std::map<Grade, std::unique_ptr<Stalk>> cache;
++  std::unordered_map<ActiveData, std::unique_ptr<Stalk>, ActiveDataHash> reductions;
++  // Keep exact-grade lookups cheap: repeated coordinates need no classification.
++  // The owning reduction cache keeps these pointers valid until clear_cache().
++  std::map<Grade, Stalk*> cache;
+   std::size_t hits = 0;
+   std::size_t computed_normal_forms = 0;
+ 
+@@ -408,12 +459,18 @@
+         Grade grade = translated(point, shift);
+         auto found = cache.find(grade);
+         if (found == cache.end()) {
+-          auto stalk = std::make_unique<Stalk>(presentation, grade);
+-          found = cache.emplace(std::move(grade), std::move(stalk)).first;
++          ActiveData active(presentation, grade);
++          auto reduced = reductions.find(active);
++          if (reduced == reductions.end()) {
++            auto stalk = std::make_unique<Stalk>(presentation, active);
++            reduced = reductions.emplace(std::move(active), std::move(stalk)).first;
++          }
++          found = cache.emplace(std::move(grade), reduced->second.get()).first;
+         } else {
+           ++hits;
+         }
+-        result[l].push_back(found->second.get());
++        // Shared algebra does not merge point summands or change slice edges.
++        result[l].push_back(found->second);
+       }
+     }
+     return result;
+@@ -506,11 +563,12 @@
+ 
+ void Engine::clear_cache() {
+   impl_->cache.clear();
++  impl_->reductions.clear();
+   impl_->hits = 0;
+   impl_->computed_normal_forms = 0;
+ }
+ CacheStatistics Engine::cache_statistics() const noexcept {
+-  return {impl_->cache.size(), impl_->hits, impl_->computed_normal_forms, impl_->cache.size()};
++  return {impl_->cache.size(), impl_->hits, impl_->computed_normal_forms, impl_->reductions.size()};
+ }
+ 
+ }  // namespace jordan::f2

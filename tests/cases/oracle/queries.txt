@@ -1,0 +1,240 @@
+oracle_2d_001 1 0 3 1
+oracle_3d_002 0 1 -1 1 1 1
+oracle_2d_003 0 -1 0 1
+oracle_1d_004 -1 -1
+oracle_2d_005 1 0 2 0
+oracle_2d_006 0 1 0 1
+oracle_1d_007 0 0
+oracle_1d_008 0 2
+oracle_2d_009 -1 0 1 2
+oracle_3d_010 1 0 0 3 2 0
+oracle_1d_011 1 3
+oracle_2d_012 1 1 2 3
+oracle_1d_013 -1 1
+oracle_2d_014 1 0 2 1
+oracle_3d_015 0 0 -1 1 1 0
+oracle_1d_016 0 2
+oracle_1d_017 0 2
+oracle_1d_018 1 3
+oracle_2d_019 -1 0 0 2
+oracle_3d_020 1 0 1 2 1 1
+oracle_1d_021 0 2
+oracle_1d_022 1 3
+oracle_2d_023 1 0 1 0
+oracle_1d_024 -1 -1
+oracle_3d_025 -1 0 0 1 1 2
+oracle_2d_026 1 -1 2 -1
+oracle_1d_027 -1 -1
+oracle_1d_028 0 1
+oracle_3d_029 -1 0 -1 -1 1 0
+oracle_2d_030 0 -1 0 -1
+oracle_2d_031 1 1 1 1
+oracle_1d_032 0 2
+oracle_2d_033 0 1 2 3
+oracle_3d_034 -1 0 0 1 2 0
+oracle_3d_035 0 1 1 1 2 2
+oracle_2d_036 -1 0 0 2
+oracle_3d_037 -1 1 -1 0 3 -1
+oracle_1d_038 -1 0
+oracle_2d_039 0 1 0 2
+oracle_1d_040 -1 0
+oracle_1d_041 -1 1
+oracle_3d_042 0 0 -1 2 1 1
+oracle_3d_043 1 -1 1 2 0 1
+oracle_2d_044 -1 1 1 3
+oracle_1d_045 -1 -1
+oracle_3d_046 1 -1 0 1 1 2
+oracle_3d_047 1 1 1 2 2 1
+oracle_1d_048 -1 -1
+oracle_1d_049 1 3
+oracle_3d_050 -1 1 0 1 2 1
+oracle_1d_051 1 1
+oracle_1d_052 0 0
+oracle_1d_053 1 2
+oracle_2d_054 1 0 3 0
+oracle_1d_055 -1 1
+oracle_1d_056 1 3
+oracle_2d_057 -1 0 0 0
+oracle_1d_058 -1 1
+oracle_1d_059 1 1
+oracle_1d_060 1 2
+oracle_1d_061 0 2
+oracle_2d_062 -1 1 -1 3
+oracle_3d_063 -1 1 -1 1 3 1
+oracle_3d_064 -1 0 1 1 1 2
+oracle_2d_065 -1 -1 0 0
+oracle_2d_066 -1 0 -1 2
+oracle_1d_067 0 0
+oracle_1d_068 -1 0
+oracle_3d_069 1 1 -1 2 1 0
+oracle_3d_070 1 0 0 1 2 1
+oracle_3d_071 0 0 0 0 0 1
+oracle_1d_072 1 3
+oracle_1d_073 0 1
+oracle_3d_074 0 0 1 2 2 2
+oracle_2d_075 1 -1 3 0
+oracle_3d_076 -1 1 -1 1 3 -1
+oracle_1d_077 -1 1
+oracle_1d_078 0 1
+oracle_1d_079 0 0
+oracle_3d_080 1 -1 0 3 1 1
+oracle_1d_081 -1 -1
+oracle_3d_082 0 1 1 1 2 2
+oracle_1d_083 1 1
+oracle_3d_084 0 1 -1 1 2 -1
+oracle_3d_085 -1 -1 -1 -1 1 0
+oracle_1d_086 0 0
+oracle_3d_087 -1 0 1 0 2 3
+oracle_3d_088 1 -1 0 2 -1 1
+oracle_3d_089 0 0 -1 0 0 1
+oracle_1d_090 1 1
+oracle_2d_091 -1 0 -1 2
+oracle_1d_092 1 2
+oracle_3d_093 -1 1 0 1 3 2
+oracle_3d_094 1 0 0 3 1 2
+oracle_2d_095 -1 0 0 0
+oracle_1d_096 -1 0
+oracle_3d_097 -1 -1 0 -1 -1 0
+oracle_1d_098 -1 0
+oracle_1d_099 1 3
+oracle_3d_100 -1 0 1 -1 1 2
+oracle_2d_101 -1 1 -1 1
+oracle_1d_102 1 1
+oracle_2d_103 1 0 1 1
+oracle_2d_104 0 1 1 1
+oracle_3d_105 -1 0 1 1 1 2
+oracle_3d_106 0 0 1 2 0 3
+oracle_1d_107 -1 1
+oracle_1d_108 1 3
+oracle_1d_109 -1 -1
+oracle_3d_110 1 1 0 3 3 2
+oracle_3d_111 0 -1 1 0 1 1
+oracle_1d_112 -1 -1
+oracle_1d_113 -1 -1
+oracle_1d_114 1 1
+oracle_1d_115 -1 -1
+oracle_3d_116 -1 0 0 1 0 0
+oracle_2d_117 -1 -1 0 0
+oracle_1d_118 0 2
+oracle_2d_119 -1 -1 1 0
+oracle_1d_120 1 2
+oracle_1d_121 1 2
+oracle_2d_122 0 -1 0 1
+oracle_1d_123 -1 1
+oracle_1d_124 -1 0
+oracle_1d_125 -1 1
+oracle_3d_126 0 -1 1 2 -1 3
+oracle_2d_127 1 1 1 3
+oracle_3d_128 1 -1 0 2 -1 0
+oracle_1d_129 -1 1
+oracle_3d_130 0 1 0 0 1 0
+oracle_1d_131 1 1
+oracle_1d_132 1 2
+oracle_3d_133 0 -1 0 2 -1 2
+oracle_3d_134 0 1 -1 1 1 -1
+oracle_2d_135 0 -1 2 0
+oracle_1d_136 0 2
+oracle_3d_137 1 1 1 1 1 3
+oracle_3d_138 0 1 0 1 2 1
+oracle_1d_139 0 1
+oracle_2d_140 0 1 2 1
+oracle_2d_141 0 -1 0 1
+oracle_2d_142 1 -1 3 -1
+oracle_2d_143 -1 -1 0 1
+oracle_2d_144 1 1 3 2
+oracle_2d_145 0 -1 0 -1
+oracle_3d_146 0 1 1 1 2 1
+oracle_1d_147 1 2
+oracle_1d_148 -1 0
+oracle_2d_149 1 1 2 2
+oracle_3d_150 -1 1 -1 -1 2 0
+oracle_3d_151 -1 -1 0 1 1 2
+oracle_2d_152 -1 -1 -1 -1
+oracle_2d_153 1 1 2 3
+oracle_3d_154 1 -1 0 2 0 2
+oracle_3d_155 -1 -1 -1 1 0 0
+oracle_3d_156 -1 -1 0 0 0 1
+oracle_2d_157 1 1 1 3
+oracle_2d_158 1 -1 2 1
+oracle_2d_159 0 0 0 1
+oracle_2d_160 -1 -1 -1 1
+oracle_3d_161 -1 0 0 -1 2 1
+oracle_3d_162 1 1 1 2 1 2
+oracle_1d_163 1 1
+oracle_1d_164 -1 -1
+oracle_2d_165 0 1 1 3
+oracle_1d_166 0 0
+oracle_3d_167 0 -1 -1 0 0 1
+oracle_1d_168 1 1
+oracle_3d_169 -1 -1 0 0 1 2
+oracle_3d_170 -1 0 -1 1 0 -1
+oracle_2d_171 1 1 2 1
+oracle_1d_172 1 3
+oracle_2d_173 -1 0 1 2
+oracle_3d_174 -1 1 -1 -1 2 1
+oracle_2d_175 0 0 0 2
+oracle_3d_176 -1 -1 -1 -1 0 -1
+oracle_2d_177 0 0 1 1
+oracle_2d_178 1 0 2 2
+oracle_1d_179 0 2
+oracle_2d_180 0 0 1 2
+oracle_2d_181 1 0 1 2
+oracle_1d_182 0 2
+oracle_3d_183 1 0 1 2 0 3
+oracle_1d_184 0 2
+oracle_2d_185 -1 1 1 1
+oracle_3d_186 0 0 1 0 2 3
+oracle_3d_187 0 0 -1 1 0 -1
+oracle_2d_188 1 0 1 1
+oracle_3d_189 -1 0 1 -1 0 3
+oracle_3d_190 1 0 1 2 0 1
+oracle_3d_191 0 0 1 0 1 2
+oracle_3d_192 -1 -1 0 -1 -1 1
+oracle_2d_193 -1 -1 1 1
+oracle_2d_194 1 -1 2 0
+oracle_3d_195 0 1 0 0 1 0
+oracle_2d_196 1 1 3 2
+oracle_3d_197 -1 1 1 -1 3 2
+oracle_1d_198 -1 0
+oracle_2d_199 0 1 1 1
+oracle_3d_200 0 0 0 0 2 2
+oracle_2d_201 -1 -1 -1 0
+oracle_1d_202 -1 0
+oracle_1d_203 -1 1
+oracle_3d_204 -1 -1 -1 0 -1 0
+oracle_3d_205 -1 0 0 -1 2 2
+oracle_2d_206 0 0 1 2
+oracle_2d_207 1 -1 1 1
+oracle_1d_208 0 0
+oracle_3d_209 0 1 -1 2 2 0
+oracle_3d_210 1 -1 1 2 1 1
+oracle_3d_211 0 -1 -1 2 -1 1
+oracle_3d_212 1 1 -1 3 3 -1
+oracle_2d_213 0 0 2 1
+oracle_3d_214 -1 -1 -1 -1 -1 1
+oracle_1d_215 1 3
+oracle_3d_216 1 0 0 2 0 0
+oracle_1d_217 -1 1
+oracle_2d_218 1 0 2 1
+oracle_2d_219 1 0 3 1
+oracle_3d_220 0 -1 0 1 -1 2
+oracle_3d_221 0 0 1 0 1 1
+oracle_2d_222 0 1 1 1
+oracle_1d_223 0 0
+oracle_1d_224 0 1
+oracle_2d_225 0 -1 0 1
+oracle_1d_226 -1 0
+oracle_1d_227 0 0
+oracle_1d_228 -1 -1
+oracle_2d_229 1 0 3 0
+oracle_2d_230 -1 1 1 3
+oracle_3d_231 1 0 0 3 2 1
+oracle_3d_232 -1 1 1 -1 3 3
+oracle_3d_233 -1 -1 -1 -1 -1 -1
+oracle_2d_234 0 -1 0 0
+oracle_3d_235 -1 -1 0 0 0 0
+oracle_3d_236 0 1 1 2 2 3
+oracle_3d_237 1 -1 -1 2 0 -1
+oracle_1d_238 0 2
+oracle_3d_239 -1 -1 1 1 -1 3
+oracle_1d_240 -1 -1

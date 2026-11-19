@@ -1,0 +1,7 @@
+# The diamond shares one reduction until the relation appears.
+scc2020
+2
+1 2 0
+10 10 ; 0 1
+0 0 ;
+0 0 ;

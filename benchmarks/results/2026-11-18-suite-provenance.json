@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-18",
+  "machine": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1365U",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "compiler": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+    "build": "Release, -O3 -DNDEBUG; core C++20; benchmark gnu++20",
+    "cpu_affinity": "not pinned",
+    "frequency": "not fixed",
+    "background_load": "uncontrolled workstation"
+  },
+  "source_sha256": {
+    "CMakeLists.txt": "84b7494862b8e7bd41cd83c0b2f4d14503cd9c851c8537c3795da7930e57102e",
+    "benchmarks/workloads.hpp": "72bda15305416c16aa0ae1f1ae3a78be0606ed48b780ce3c954ef476a8baad5e",
+    "benchmarks/method_benchmark.cpp": "502d0c92a0dcdcf30734b2af9be4e287cb4757be22cd820e8fb29ce9d3c9f6ca",
+    "benchmarks/query_benchmark.cpp": "00cba5de357446f81cc45fd7c26cfaa75b5ae5ae0976dd66935bc3fe3d53d444",
+    "benchmarks/run_suite.py": "f54d4de91c01bc7a4c3f397912bc1295ca062ed210973ff9cea128171805f4c0",
+    "src/jordan.cpp": "49ecde5eda61e0f7873a53ddaf8bf937b179c7a256ad66ddc38911ea4048e6f7",
+    "src/presentation.hpp": "086ab911efea8143e21bf74d7679edb0d9dc7c07b6f372124c169801a4f7b8f6",
+    "src/io.cpp": "4f21492ebd206190e3e93288a5324de9447fadcc90f139c633d260202e09d974",
+    "include/jordan/io.hpp": "3800f1b933d9e11345c5e241f289268d2228d41158ed8a98960edf0b05bf2cd7",
+    "include/jordan/jordan.hpp": "940d51b80597587fd52a61334d20dcad95a81f5ec7b6505bc3f7528ce6f409c1"
+  },
+  "data_preparation_versions": {
+    "numpy": "2.1.3",
+    "scipy": "1.14.1"
+  },
+  "python": "3.12.3",
+  "dependencies": {
+    "Persistence-Algebra": "d9b85f4bf692b0ada09e2c43897685b83a2b705c",
+    "doctest": "2d0a9359a60c51affe2a9bebb1be1dca47868151"
+  },
+  "protocol": {
+    "repeats": 5,
+    "cache": [
+      "reuse",
+      "reset"
+    ],
+    "timeout_seconds": 600,
+    "virtual_address_space_mib": 2048,
+    "commands": [
+      "python3 benchmarks/run_suite.py /tmp/jordan-type-build/jordan_method_benchmark /tmp/jordan-suite-jd5bjqdx/final-methods.csv --repeats 5 --timeout 600 --cache both",
+      "python3 benchmarks/run_suite.py /tmp/jordan-type-build/jordan_benchmark /tmp/jordan-suite-jd5bjqdx/final-queries.csv --repeats 5 --timeout 600 --cache both"
+    ],
+    "method_case_count": 49,
+    "query_case_count": 45,
+    "input_instances": "Seeded recipes use five consecutive seeds; deterministic and fixed-file cases repeat one input five times.",
+    "timing_summary": "Method tables use medians across five fresh-process repetitions of the within-process five-pass medians; cold timings use the first query.",
+    "filesystem_cache": "Not cold: input files are hashed before measurements."
+  },
+  "validation": {
+    "ctest_groups": 4,
+    "test_cases": 29,
+    "assertions": 6804,
+    "unchanged_original_recipes": 14,
+    "analytic_instances": 21,
+    "fork_comparable_pairs": 36,
+    "independent_graph_dimension_probes": 24,
+    "graph_vectors": [
+      {
+        "name": "tumour_foxp3",
+        "jordan_power_ranks": [
+          240,
+          110,
+          46,
+          12,
+          0
+        ],
+        "filtered_ranks": [
+          209,
+          99,
+          42,
+          10
+        ],
+        "target_offset": [
+          6.335394485545859,
+          2.6814499060249046
+        ],
+        "component_computations": 8
+      },
+      {
+        "name": "tumour_cd8",
+        "jordan_power_ranks": [
+          314,
+          119,
+          45,
+          11,
+          0
+        ],
+        "filtered_ranks": [
+          255,
+          104,
+          40,
+          10
+        ],
+        "target_offset": [
+          4.307205647451131,
+          1.9895358226427176
+        ],
+        "component_computations": 8
+      }
+    ],
+    "runner": {
+      "statuses": {
+        "valid": [
+          "ok",
+          "ok"
+        ],
+        "timeout": [
+          "timeout",
+          "timeout"
+        ],
+        "incomplete": [
+          "invalid_output",
+          "invalid_output"
+        ],
+        "mismatch": [
+          "ok",
+          "result_mismatch"
+        ],
+        "allocation": [
+          "memory_limit",
+          "memory_limit"
+        ]
+      },
+      "existing_output_preserved": true,
+      "virtual_memory_limit_enforced": true
+    },
+    "cli": {
+      "registered_inputs_protected": [
+        "benchmarks/data/circle_h0_small.scc",
+        "benchmarks/data/circle_h0_small.slices"
+      ]
+    },
+    "method_processes": {
+      "expected": 490,
+      "completed": 490,
+      "statuses": {
+        "ok": 490
+      }
+    },
+    "query_processes": {
+      "expected": 450,
+      "completed": 450,
+      "measurement_rows": 1350,
+      "statuses": {
+        "ok": 450
+      }
+    },
+    "csv_consistency": {
+      "query_cross_policy_output_pairs": 675,
+      "query_rank_stream_output_pairs": 450,
+      "shared_driver_input_and_first_rank_comparisons": 400
+    },
+    "matched_basis_families_agree": true,
+    "core_api_tests_examples_unchanged": true
+  },
+  "arithmetic_headers_sha256": {
+    "grlina/general.hpp": "662a4962ce810e2885f21ac4496af30856d28c61301785f44c561733361f205f",
+    "grlina/general_checks.hpp": "a50dd53a501551fb4f490cabb0a3f15f7761043f0671c4e7a05f84cba0a37d0e",
+    "grlina/matrices/base.hpp": "f48a63ec47c4b1ddd7b490a690a4e64ba7fa9a1cfe390d097750bdb2666d2ee0",
+    "grlina/matrices/dense.hpp": "f5f550d1f1001f4a2303d17c73c3bb266a263793858aee7bc08505004313fb5f",
+    "grlina/matrices/sparse.hpp": "562f6d96802a97987797b43158201c09606a887e747aca6f77c21d214c20329c",
+    "grlina/storage/bitset_algebra.hpp": "c68b5d8439f0e4e764260469cc95345c594c8e85c6e2ba3a1f4d9902c1a24a5e",
+    "grlina/storage/columns.hpp": "080940a40e9eb6eefaab6da0e0139bddadac9978325c92144dde9419a8fb5759",
+    "grlina/storage/compact.hpp": "150b7894643949547fa9adb9397d226d7f72508b3c1d4bd0aa53bf61f75e30b0",
+    "grlina/storage/csc.hpp": "f0b3a9c22f7cb1d30f10cc71abfaa1438e652e2640618025a8accb920ec554f4",
+    "grlina/storage/traits.hpp": "bd4b515828fe198e80d5bcee65ca8b5be01390557413a03706c30a73ab1f7b11"
+  },
+  "boost_version": "#define BOOST_LIB_VERSION \"1_74\"",
+  "retained_sha256": {
+    "2026-11-18-suite-evidence.tar.gz": "17a6e3f33e9ea9ba138ef89d1d457407e67bab10d79b2363542510149f6546fb",
+    "2026-11-18-suite-methods.csv": "ec0136dc710f78fc460c8178aaf77cf1b4bc9e6677484c55e811104b9cd414fa",
+    "2026-11-18-suite-methods.runs.csv": "2dee6bf2cff7fd5e26c9b4bcc19764830d0ec87e66f8b3e2a0e88fef653b7fd8",
+    "2026-11-18-suite-queries.csv": "5ecd525b7a01b2681bd26cca0f1508f78dc92b46c59836a5193aa15423dd2a95",
+    "2026-11-18-suite-queries.runs.csv": "c2f5ed18ebd6eb3bfa518201a2f7fb9496d97efcff9f2d11a40ef0b8cbd27ae3"
+  },
+  "evidence_archive": "2026-11-18-suite-evidence.tar.gz",
+  "evidence_note": "Measured source and prior hybrid drivers are retained, with exact data-preparation/check scripts. The one-off scripts retain their original source and scratch paths; adjust them to the restored copy when replaying. Large inputs and transient pilot results are not duplicated in the archive."
+}

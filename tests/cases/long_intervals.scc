@@ -1,0 +1,12 @@
+# Known sampled interval lengths 70, 65, 48, and 4.
+scc2020
+1
+4 4 0
+70 ; 0
+96 ; 1
+150 ; 2
+4 ; 3
+0 ;
+31 ;
+80 ;
+-10 ;

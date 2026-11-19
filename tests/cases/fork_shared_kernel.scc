@@ -1,0 +1,9 @@
+# Fork maps with the same kernel.
+scc2020
+2
+3 2 0
+1 0 ; 1
+0 1 ; 1
+1 1 ; 0
+0 0 ;
+0 0 ;

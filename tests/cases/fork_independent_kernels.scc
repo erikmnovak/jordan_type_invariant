@@ -1,0 +1,8 @@
+# Fork maps with independent kernels.
+scc2020
+2
+2 2 0
+1 0 ; 1
+0 1 ; 0
+0 0 ;
+0 0 ;

@@ -1,0 +1,8 @@
+/build*/
+/.cache/
+.Rhistory
+
+*.md
+!/README.md
+
+/jordan_type_invariant_original_paper.pdf

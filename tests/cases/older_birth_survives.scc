@@ -1,0 +1,8 @@
+# When two images become dependent, the older interval must continue.
+scc2020
+1
+2 2 0
+2 ; 0 1
+4 ; 0
+0 ;
+1 ;

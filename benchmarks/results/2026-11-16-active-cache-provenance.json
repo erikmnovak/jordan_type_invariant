@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-16",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "cpu": "Intel Core i7-1365U",
+  "affinity": [
+    0
+  ],
+  "compiler": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "kernel_flags": "-O3 -DNDEBUG -fPIC -Wall -Wextra -Wpedantic -std=c++20",
+  "driver_flags": "-O3 -DNDEBUG -std=gnu++20; identical object linked into both executables",
+  "dependency_revision": "d9b85f4bf692b0ada09e2c43897685b83a2b705c",
+  "baseline_counter": "Preserved original computation; appended cache.size() to CacheStatistics return so cached_reductions reports one reduction per grade. No other baseline-kernel edits.",
+  "repetitions": 9,
+  "order": "Baseline first on odd repetitions, active first on even repetitions. Each workload and variant runs in a separate process. Within a workload: rank_blocks, streaming, filtered_ranks.",
+  "process_command": "taskset -c 0 /usr/bin/time -f \"%M %e %U %S\" -o RESOURCE_FILE EXECUTABLE WORKLOAD ANSWER_DUMP FIXTURE",
+  "fixture_path_relative_to_dependency": "test_presentations/two_circles_2_dim1_minpres.scc",
+  "verification": "All complete answer dumps compared byte-for-byte against the preserved baseline. Rank-block and streaming vectors compared exactly. Every timed warm answer compared with its cold answer.",
+  "answers_per_variant_per_repetition": 1248,
+  "combined_answers_sha256": "26038652c55a9e3ddf18e6119888549aa0a43eaefb211d38ba554bab05f0d081",
+  "sha256": {
+    "original_kernel": "d64dbdebb210d4d5e27c8f4a8b9caf8776704637d39df6f46af149c4045fd721",
+    "baseline_kernel_with_counter": "0199b4bab14855389859343224d10ba9f46e9f7f539b16ed5c5ea16fe78c5709",
+    "active_kernel": "49ecde5eda61e0f7873a53ddaf8bf937b179c7a256ad66ddc38911ea4048e6f7",
+    "public_header": "940d51b80597587fd52a61334d20dcad95a81f5ec7b6505bc3f7528ce6f409c1",
+    "benchmark_source": "603a89a569c7551eaa64a510d75066d0ea019a6b07a5dcd59bf157348a249ce5",
+    "io_source": "4f21492ebd206190e3e93288a5324de9447fadcc90f139c633d260202e09d974",
+    "fixture": "73d36395237fd36b43eb8fc2517270f15f0305e569722ab04da7928dd04e174d",
+    "shared_driver_object": "5af2e8bd7305671bd41d31563b9100037fa6b8e0fd9685e6239473894a40e55a",
+    "shared_io_object": "08f8ae4719c72e802008197371e94ee8aa207f728a241db3b47ab9b1999f3154",
+    "baseline_executable": "adb15dccc667aa6a1a826f1abd6d0e481c6e9623e1051ad2e3cf1af7e866f34c",
+    "active_executable": "dcaacb6467c02656618ab8e701021b176d063c02e3da29c684ca3e306892f95a"
+  },
+  "caveats": [
+    "Observed wall times on a shared laptop; no confidence intervals.",
+    "Peak RSS is for the entire workload process, including all three query methods and their allocator history.",
+    "Constructor timings can reflect preceding query methods in the same workload; no constructor-speed claim.",
+    "Only one small external file fixture, not a representative real-data study."
+  ]
+}
