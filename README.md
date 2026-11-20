@@ -78,6 +78,13 @@ Quote each coordinate vector as one argument, with spaces between coordinates. U
 
 `--help` lists all options. A successful query writes its result to stdout and exits with status 0. A failed query writes a diagnostic to stderr and exits with status 1.
 
+To plot a query, pass its saved output or pipe it directly to the plotter. It draws power ranks and block counts for `type`, or rank against power for `ranks`. The plotting scripts use Python 3 and Matplotlib 3.5 or newer. [Query plotter](visualisation/plot_invariant.py).
+
+```sh
+/tmp/jordan-type-build/jordan_type ranks examples/paper.scc examples/paper.slices \
+  --source "0 0" --target "1 0" | python3 visualisation/plot_invariant.py - /tmp/paper-ranks.svg
+```
+
 The paper inputs, [paper.scc](examples/paper.scc) and [paper.slices](examples/paper.slices), are illustrated below at zero translation. Colors group the finite slices; arrows show the maps used by `T` between consecutive slices. The CLI tests check this example's exact output with both algorithms and automatic selection.
 
 ![Paper example at zero translation: three colored slices, their sampled vector spaces and structure maps, and the resulting Jordan type.](examples/paper.svg)
@@ -340,7 +347,25 @@ The CSV records the input paths or recipe name, dimensions, nonzeros, query sche
 
 With `reuse`, engine caches grow as queries visit distinct grades. With `reset`, an engine retains the preparations for one query at a time. The cache benchmark samples its counters at the end of the repeated batch; under `reset`, they describe the final query. The method comparison retains three independent engines, which also contribute to memory use.
 
-The [study results](benchmarks/results) include the timing tables, resource measurements and source snapshots. Use the [suite runner](benchmarks/run_suite.py) to repeat the measurements.
+For a repeated study, the shell script launches each case in a fresh process. It defaults to five repetitions, both cache policies, a limit of 600 seconds per process and 2,048 MiB of virtual memory. Omit the case names to run the full catalogue. The script uses Bash 5, GNU Awk, GNU coreutils, GNU time at `/usr/bin/time`, and `jq`. [Suite runner](benchmarks/run_suite.sh).
+
+```sh
+benchmarks/run_suite.sh /tmp/jordan-type-build/jordan_method_benchmark \
+  /tmp/jordan-methods.csv free_chain_8 even_width_8
+```
+
+`jordan-methods.csv` holds the completed measurements. Its companion `jordan-methods.runs.csv` records every attempt, including timeouts, peak memory and input hashes. The script also prints a Markdown table that can be redirected to a report.
+
+The figure shows the November 2026 study on an Intel Core i7-1365U. Each point is the median time per query in the repeated batch across five runs for that case and cache policy. Both panels use the same logarithmic time axis. [Measurements](benchmarks/results/2026-11-18-suite-methods.csv) · [Run conditions](benchmarks/results/2026-11-18-suite-provenance.json).
+
+![Median time per query for rank blocks, streaming and automatic selection in four workloads, with cache reuse and reset.](visualisation/method_times.png)
+
+To reproduce it or select other cases, pass the measurement CSV, the figure path and the case names to the plotter.
+
+```sh
+python3 visualisation/plot_methods.py benchmarks/results/2026-11-18-suite-methods.csv \
+  /tmp/method-times.png free_chain_256 even_width_8 basis_sparse_1024 basis_dense_1024
+```
 
 ## Dependencies
 
